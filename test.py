@@ -10,7 +10,9 @@ def draw_onclick(x, y):
 button = Turtle()
 button.hideturtle()
 button.shape('square')
+#use this to change the shape size. put after the shape spesified.
 button.shapesize(2,2,1)
+#
 button.fillcolor('red')
 button.penup()
 button.goto(150, 150)
