@@ -9,6 +9,7 @@
 #TODO: draw the body parts for the hangman on hte turtle
 from turtle import *
 from time import sleep
+from random import random
 
 testWord = "test"
 letterSubmitted = None
@@ -65,17 +66,25 @@ def drawLimbs():
         backward(80)
         gameOver()
     limbs = limbs + 1
-    print(limbs)    
+    tries = str(6 - limbs)
+    if limbs == 5:
+        print("you have "+ tries +" try left")
+    else:
+        print("you have "+ tries +" tries left")  
     game()
-     
+
 def gameOver():
     #make turtle draw gameover
     print("Gameover")
     sleep(2)
     quit()
 
+def writeWord():
+    wordSize = len(testWord)
+    print(wordSize)
 
 def game():
+    writeWord()
     print("guess the letter of the word")
     letterSubmitted = input()
     if letterSubmitted in testWord:
