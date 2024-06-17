@@ -82,7 +82,7 @@ def gameOver():
 
 def writeWord():
     wordSize = len(wordSelected)
-    print(wordSize)
+    print("There is " + wordSize + " letters left.")
 
 def game():
     writeWord()
